@@ -18,3 +18,11 @@ mapear
 5.-Definimos los parametros de cada entidad, nombre de la entidad, columnas,
 tipos de datos, sequencias, restricciones, etc. Mientras mas explicitos seamos
 es mejor.
+
+6.-Establecemos las relaciones entre entidades, en este ejemplo primero usamos
+la relacion one-to-one, en el caso en que 1 cliente solo puede tener 1 usuario,
+ esta relacion se establece de esta forma:
+
+@OneToOne
+
+private User user;

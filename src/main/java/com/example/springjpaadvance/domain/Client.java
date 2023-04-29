@@ -25,4 +25,7 @@ public class Client {
     private Long id;
     @Column(name = "name")
     private String name;
+
+    @OneToOne
+    private User user;
 }
