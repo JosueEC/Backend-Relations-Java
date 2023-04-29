@@ -6,7 +6,8 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "client")
 public class Client {
