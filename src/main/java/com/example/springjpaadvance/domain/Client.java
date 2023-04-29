@@ -1,7 +1,12 @@
 package com.example.springjpaadvance.domain;
 
 import jakarta.persistence.*;
+import lombok.*;
 
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 @Table(name = "client")
 public class Client {
