@@ -27,4 +27,21 @@ public class Address {
     private String street;
     @Column(name = "number")
     private String number;
+
+    @ManyToOne(
+            fetch = FetchType.LAZY,
+            optional = false
+    )
+    @JoinColumn(name = "client_id")
+    private Client client;
+    // Esta es la sintaxis para establecer una relacion @ManyToOne la cual es complementaria a la
+    // relacion @OneToMany, en este lado especificamos el tipo de carga de los datos devueltos con
+    // fetch, usamos FetchType.LAZY para ver como funciona.
+    // -optional: Establece que no puede existir una Address sin un Client asociado, de lo contrario
+    //      serian datos corruptos
+    // @JoinColumn: Establece la columna con la cual se establece la relacion entre las tablas, esto lo
+    //      hace a traves del ID
+    // Por ultimo solo establecemos la propiedad, en este caso solo es un objeto de tipo Client por ser
+    // relacion @ManyToOne
+
 }

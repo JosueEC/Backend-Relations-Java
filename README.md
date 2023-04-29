@@ -19,13 +19,7 @@ mapear
 tipos de datos, sequencias, restricciones, etc. Mientras mas explicitos seamos
 es mejor.
 
-6.-Establecemos las relaciones entre entidades, en este ejemplo primero usamos
-la relacion one-to-one, en el caso en que 1 cliente solo puede tener 1 usuario,
- esta relacion se establece de esta forma:
-
-@OneToOne
-
-private User user;
+6.-Establecemos las relaciones entre entidades.
 
 7.-Creamos nuestras interface repository respectivas a nuestras entidades, esto
 lo hacemos a traves de la etiqueta @Repository
