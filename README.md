@@ -26,3 +26,6 @@ la relacion one-to-one, en el caso en que 1 cliente solo puede tener 1 usuario,
 @OneToOne
 
 private User user;
+
+7.-Creamos nuestras interface repository respectivas a nuestras entidades, esto
+lo hacemos a traves de la etiqueta @Repository
