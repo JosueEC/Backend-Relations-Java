@@ -29,3 +29,6 @@ private User user;
 
 7.-Creamos nuestras interface repository respectivas a nuestras entidades, esto
 lo hacemos a traves de la etiqueta @Repository
+
+8.-Creamos la configuracion para nuestra base de datos y JPA con Hibernate en este caso.
+Esto se hace en resources/application.properties
