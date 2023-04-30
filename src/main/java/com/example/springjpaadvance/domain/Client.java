@@ -59,4 +59,12 @@ public class Client {
             }
     )
     private Set<Product> products = new HashSet<>();
+        // Esta es la sintaxis para establecer una relacion @ManyToMany, de igual forma a nuestra entidad
+        // Client debe llegar una lista con entidades Product
+        // @ManyToMany: Establece el tipo de relacion
+        // fetch: establece la forma de carga de los datos cuando estos son solicitados
+        // @JoinTable: Establece la tabla extra que se crea con la llaves forenas que establecen la relacion
+        // name: nombre de la table
+        // joinColumns: especificacion de la columna que relaciona la primer tabla
+        // inverseJoinColumns: especificacion de la columna que relaciona la segunda tabla
 }
