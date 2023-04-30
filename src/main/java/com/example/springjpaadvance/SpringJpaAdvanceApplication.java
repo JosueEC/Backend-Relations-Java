@@ -24,7 +24,7 @@ public class SpringJpaAdvanceApplication {
 	CommandLineRunner commandLineRunner (UserRepository userRepository, ClientRepository clientRepository, AddressRepository addressRepository) {
 		return args -> {
 			User user1 = userRepository.save(new User(null,"josue-cruz","123"));
-			Client client1 = clientRepository.save(new Client(null,"Josue Evangelista Cruz", user1, null));
+			Client client1 = clientRepository.save(new Client(null,"Josue Evangelista Cruz", user1, null, null));
 			Address address1 = addressRepository.save(new Address(null, "Negrete", "15", client1));
 			Address address2 = addressRepository.save(new Address(null, "Allende", "10", client1));
 			Address address3 = addressRepository.save(new Address(null, "Morelos", "5", client1));

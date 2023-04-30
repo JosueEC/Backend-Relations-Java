@@ -47,4 +47,16 @@ public class Client {
         //      addresses asociadas al mismo y tambien si seran de carga EAGER o LAZY
         // -cscade: establece lo que ocurre cuando se modifica un Client, en este caso ALL indica que si
         //      se modifica alguna address del Client, esta tambien se modifica en la entidad Address
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "client_product",
+            joinColumns = {
+                    @JoinColumn(name = "fk_client")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "fk_product")
+            }
+    )
+    private Set<Product> products = new HashSet<>();
 }
