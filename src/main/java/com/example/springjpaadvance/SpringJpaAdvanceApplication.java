@@ -48,9 +48,14 @@ public class SpringJpaAdvanceApplication {
 			// Asignacion @ManyToMany
 			client1.setProducts(Set.of(product1, product2, product3));
 
+			//Actualizamos nuestro registro
 			Client josue = clientRepository.save(client1);
+
+			//Imprimimos en consola los datos del registro
 			System.out.println("Client name: " + josue.getName());
 			System.out.println("User name: " + josue.getUser().getUsername());
+
+			// Asi es como recorremos una lista Set, a traves de una funcion lambda
 			josue.getAddresses().forEach(address -> {
 				System.out.println("Address: " + address.getStreet() + " No." + address.getNumber() );
 			});
